@@ -14,7 +14,7 @@ public class Greeter {
  public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
     String capitalizedName = name.substring(0, 1).toUpperCase() + name.substring(1);
-    return messages.getString("greeting") + ", " + capitalizedName;
+    return messages.getString("greeting") + " " + capitalizedName + "";
 }
 
 public static void main(String[] args) {
