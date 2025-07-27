@@ -11,10 +11,11 @@ public class Greeter {
     this.name = name;
   }
 
-  public String sayHello() {
+ public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
-    return messages.getString("greeting") + ", " + name;
-  }
+    String capitalizedName = name.substring(0, 1).toUpperCase() + name.substring(1);
+    return messages.getString("greeting") + ", " + capitalizedName;
+}
 
   public static void main(String[] args) {
     String language = args[0];
